@@ -1,5 +1,5 @@
 So I was playing outpost (https://boardgamegeek.com/boardgame/1491/outpost) a few days ago.
-I got bored of having to calculate all possible values that I could big with my current resources
+I got bored of having to calculate all possible values that I could bid with my current resources
 and wondered if there was a practical way to simple print the values I can bid with the combinations
 or cards used.
 
