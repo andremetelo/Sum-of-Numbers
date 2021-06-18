@@ -17,7 +17,7 @@ print(*list_of_numbers)
 
 count = len(list_of_numbers)
 
-#Creates the single item in the list to seed . then Dynamic program assembles all other lists
+#Creates the single item in the list as seed for new solutions. From there dynamic program assembles all other lists
 results = []
 results.append([list_of_numbers[0]])
 
@@ -33,17 +33,16 @@ for n in range(1, count):
 
 	results.extend(new_entries)
 	del new_entries[:] #No longer need to use memory for the last cycle
-print (*results)	
+#print (*results)	
 #Results had several levels of lists, Thus the next step
 
 #Flatten Lists to have a single level of the list:
 flat= []
 for item in results:
 	flat.append(list(flatten(item)))
-del results[:] #No longer need to messy list
+del results[:] #No longer need the messy list
 
 #Sums all the numbers
-
 sums = []
 for item in flat:
 	sums.append(sum(item))
@@ -55,5 +54,3 @@ del flat[:]
 sums = removeduplicates(sums)
 
 print(*sums)
-
-
